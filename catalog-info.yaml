@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: eum9e6jpe-go-gitops
+  description: This is GitOps manifest for eum9e6jpe-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=eum9e6jpe-go
+    backstage.io/kubernetes-id: eum9e6jpe-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: eum9e6jpe-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:eum9e6jpe-go
